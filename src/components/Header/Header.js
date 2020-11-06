@@ -3,7 +3,7 @@ import './Header.css';
 
 const Header = () => (
   <header>
-
+    <h1>Weirdness Calculator</h1>
   </header>
 );
 
