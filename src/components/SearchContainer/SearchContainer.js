@@ -13,6 +13,12 @@ const SearchContainer = () => (
         When you find a GIF you like, press the Like button. Once you like 5 GIFs we'll show you how weird you are.
       </p>
     </section>
+
+    <section className="search">
+      <label htmlFor="searchbar">Search term</label>
+      <input type="text" id="searchbar"/>
+      <button>Search</button>
+    </section>
   </div>
 );
 
