@@ -3,7 +3,6 @@ import './SearchContainer.css';
 
 const SearchContainer = () => (
   <div className="search-container">
-
     <section className="description">
       <p className="desc-section-one">
         Find out how weird you are by selecting the GIFs that make you laugh. 
