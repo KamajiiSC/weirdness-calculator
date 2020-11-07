@@ -4,3 +4,12 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+.liked-list{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.liked-list img{
+  width:100%;
+}
