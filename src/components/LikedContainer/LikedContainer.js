@@ -4,7 +4,7 @@ import './LikedContainer.css';
 const LikedContainer = () => (
   <div className="liked-container">
     <h2>YOUR LIKED GIFS</h2>
-    <div className="liked-container">
+    <div className="liked-list">
 
     </div>
     <button>CALCULATE MY WEIRDNESS SCORE</button>
