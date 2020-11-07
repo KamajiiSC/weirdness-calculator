@@ -7,8 +7,10 @@ const LikedContainer = () => (
     <div className="liked-list">
 
     </div>
-    <button>CALCULATE MY WEIRDNESS SCORE</button>
-    <p>You must like x more GIFs to calculate your score</p>
+    <div className="calc-btn-desc">
+      <button>CALCULATE MY WEIRDNESS SCORE</button>
+      <p>You must like x more GIFs to calculate your score</p>
+    </div>
   </div>
 );  
 
