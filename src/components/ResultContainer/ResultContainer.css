@@ -6,6 +6,9 @@
   margin-right:auto;
   margin-left:auto;
 }
+.result-container h2{
+  margin-bottom: 0;
+}
 .result-display{
   width:30%;
   display: flex;
@@ -13,7 +16,7 @@
   text-align: center;
   margin-right:auto;
   margin-left:auto;
-  margin-bottom: 5%;
+  margin-bottom: 8%;
 }
 .gif-display{
   width: 75%;
