@@ -4,6 +4,7 @@ import placeholder from '../../resources/placeholder-image.png';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 
+// Marks underneath slider
 const marks = {
   0: 0,
   1: 1,
