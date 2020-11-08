@@ -6,11 +6,10 @@ import ResultContainer from '../ResultContainer/ResultContainer';
 
 
 export default class SelectionContainer extends Component {
-  
+
   constructor(props) {
     super(props);
     this.state = {
-
     };
   }
 
