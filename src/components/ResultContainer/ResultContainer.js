@@ -1,6 +1,8 @@
 import React from 'react';
 import './ResultContainer.css';
 import placeholder from '../../resources/placeholder-image.png';
+import Slider from 'rc-slider';
+import 'rc-slider/assets/index.css';
 
 const ResultContainer = () => (
   <div className="result-container">
@@ -10,6 +12,7 @@ const ResultContainer = () => (
       <img src={placeholder} alt="Placeholder for GIF results" className="gif-display"/>
       <button type="submit">Like</button>
     </div>
+    <Slider />
   </div>
 );
 
