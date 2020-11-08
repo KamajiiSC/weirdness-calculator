@@ -1,5 +1,11 @@
 .search-container{
   height: 40%;
+  width:90%;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .description{
   font-size:1.3em;
