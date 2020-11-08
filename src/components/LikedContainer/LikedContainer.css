@@ -7,14 +7,13 @@
   width: 90%;
   margin-right: auto;
   margin-left: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
 }
 
 .liked-list{
   display:grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 5%;
+  margin-top:7%;
 }
 
 .liked-list img{
@@ -22,5 +21,6 @@
 }
 
 .calc-btn-desc{
+  margin-top: 15%;
   text-align: center;
 }
