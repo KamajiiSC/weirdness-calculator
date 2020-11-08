@@ -1,9 +1,15 @@
+.liked-layout-container{
+  width:50%;  
+  border-left: 3px solid #dfdfdf;
+}
+
 .liked-container{
-  width:50%;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  border-left: 3px solid #dfdfdf;
 }
 
 .liked-list{
