@@ -1,3 +1,4 @@
-.selection-container{
-  width: 50%;
+.selection-divider{
+  border-top: 3px solid #dfdfdf;
 }
+
