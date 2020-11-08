@@ -20,7 +20,7 @@ export default class SearchContainer extends Component {
           <label htmlFor="search-bar">Search term</label>
           <div className="input-and-btn">
             <input type="text" id="search-bar"/>
-            <button id="search-button">Search</button>
+            <button onClick={this.props.getGif} id="search-button">Search</button>
           </div>
         </section>
       </div>
