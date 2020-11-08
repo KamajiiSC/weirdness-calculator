@@ -27,7 +27,11 @@ const ResultContainer = () => (
       <img src={placeholder} alt="Placeholder for GIF results" className="gif-display"/>
       <button type="submit">Like</button>
     </div>
-    <Slider min={0} max={10} step={1} marks={marks}/>
+    <div className="slider-container">
+      <Slider min={0} max={10} step={1} marks={marks}/>
+      <p className="slider-value">Weirdness: 0</p>
+    </div>
+
   </div>
 );
 
