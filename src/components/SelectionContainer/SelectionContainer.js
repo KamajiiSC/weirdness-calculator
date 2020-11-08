@@ -9,14 +9,18 @@ export default class SelectionContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      gifUrl:"https://api.giphy.com/v1/gifs/translate?api_key=22yty9FIPGbEixUWW3U9UpR9QzOx1iCK&s=Hello"
+      gifUrl:"https://api.giphy.com/v1/gifs/translate?api_key=22yty9FIPGbEixUWW3U9UpR9QzOx1iCK&s=Hello",
+      embedUrl: ""
     };
   }
 
   getGif = () => {
     fetch(this.state.gifUrl)
       .then(response => response.json())
-      .then(data => console.log(data.data.embed_url))
+      .then(data => {
+        this.setState({ embedUrl: data.data.embed_url });
+        })
+      .then(console.log(this.state.embedUrl))
   }
 
   render(){
