@@ -14,10 +14,10 @@ const SearchContainer = () => (
     </section>
 
     <section className="search">
-      <label htmlFor="searchbar">Search term</label>
+      <label htmlFor="search-bar">Search term</label>
       <div className="input-and-btn">
-        <input type="text" id="searchbar"/>
-        <button>Search</button>
+        <input type="text" id="search-bar"/>
+        <button id="search-button">Search</button>
       </div>
     </section>
   </div>

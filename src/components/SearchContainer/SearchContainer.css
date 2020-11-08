@@ -10,3 +10,11 @@
 .description{
   font-size:1.3em;
 }
+
+#search-bar{
+  width:25%;
+  height: 2em;
+}
+#search-button{
+  height: 2.5em;
+}
