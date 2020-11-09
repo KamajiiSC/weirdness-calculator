@@ -19,14 +19,12 @@ const marks = {
   10: 10
 }
 
-
-
 export default class ResultContainer extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      returnGif: ''
+      returnGif: ""
     }
   }
 
@@ -45,7 +43,7 @@ export default class ResultContainer extends Component {
         <h2>YOUR RESULT</h2>
         <div className="result-display">
           <p className="gif-name">example</p>
-          <img crossOrigin="Anonymous" src={this.state.returnGif} alt="Placeholder for GIF results" className="gif-display"/>
+          <img crossOrigin="Anonymous" src={this.state.returnGif || placeholder} alt="Placeholder for GIF results" className="gif-display"/>
           <button type="submit">Like</button>
         </div>
         <div className="slider-container">
