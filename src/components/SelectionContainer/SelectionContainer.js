@@ -26,7 +26,9 @@ export default class SelectionContainer extends Component {
   // Sets weirdness in state when slider calls function
   setWeirdness = (weirdness) => {
     this.setState({
+      // Save weirdness in state
       weirdness: weirdness,
+      // Set new api request url weirdness=new weirdness score
       gifUrl: "https://api.giphy.com/v1/gifs/translate?api_key=22yty9FIPGbEixUWW3U9UpR9QzOx1iCK&" + `s=${this.state.search}` + `&weirdness=${weirdness}`,
     },
     () => {
@@ -38,8 +40,9 @@ export default class SelectionContainer extends Component {
 
   setSearch = (newSearch) => {
     this.setState({
+      // Save search term in state
       search: newSearch, 
-      // Set new api request url s=newsearchterm
+      // Set new api request url s=new search term
       gifUrl: "https://api.giphy.com/v1/gifs/translate?api_key=22yty9FIPGbEixUWW3U9UpR9QzOx1iCK&" + `s=${newSearch}` + `&weirdness=${this.state.weirdness}`,
 
     }, // setState is async so only after state is set, run this function that then runs getGif 
