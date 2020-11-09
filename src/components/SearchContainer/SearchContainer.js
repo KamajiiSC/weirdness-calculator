@@ -5,7 +5,6 @@ export default class SearchContainer extends Component {
 
   handleSubmit = (e) =>{
     this.props.setSearch(e.target.firstChild.value)
-
     e.preventDefault();
   }
 
@@ -26,7 +25,7 @@ export default class SearchContainer extends Component {
           <label htmlFor="search-bar">Search term</label>
           <form onSubmit={this.handleSubmit} className="input-and-btn">
             <input type="text" id="search-bar"/>
-            <button onClick={this.props.getGif} id="search-button">Search</button>
+            <button id="search-button">Search</button>
           </form>
         </section>
       </div>

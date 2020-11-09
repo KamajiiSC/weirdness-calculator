@@ -10,7 +10,7 @@ export default class SelectionContainer extends Component {
     super(props);
     this.state = {
       // Url to fetch request from API
-      gifUrl:"https://api.giphy.com/v1/gifs/translate?api_key=22yty9FIPGbEixUWW3U9UpR9QzOx1iCK&s=Hello",
+      gifUrl:"https://api.giphy.com/v1/gifs/translate?api_key=22yty9FIPGbEixUWW3U9UpR9QzOx1iCK&" + "s=example",
 
       // Url to embed into page of GIF
       returnGif: ""
@@ -18,7 +18,12 @@ export default class SelectionContainer extends Component {
   }
 
   setSearch = (newSearch) => {
-    console.log(newSearch)
+    this.setState({
+      gifUrl: "https://api.giphy.com/v1/gifs/translate?api_key=22yty9FIPGbEixUWW3U9UpR9QzOx1iCK&" + `s=${newSearch}`,
+    }, () => {
+      this.getGif()
+    } 
+    )
   }
 
   // Function sends fetch request to gifUrl then sets embedUrl in state to returned embed url
@@ -28,13 +33,14 @@ export default class SelectionContainer extends Component {
       .then(data => {
         this.setState({ returnGif: data.data.images.downsized_large.url});
         console.log(data)
+        console.log(this.state.gifUrl)
         })
   }
 
   render(){
     return(
       <div className="selection-container">
-        <SearchContainer setSearch={this.setSearch} getGif={this.getGif} />
+        <SearchContainer setSearch={this.setSearch} />
         <hr className="selection-divider" />
         <ResultContainer returnGif={this.state.returnGif}/>
       </div>
