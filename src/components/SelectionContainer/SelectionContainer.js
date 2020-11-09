@@ -11,7 +11,7 @@ export default class SelectionContainer extends Component {
     this.state = {
       // Search term for url
       search: '',
-      
+
       // Weirdness for url
       weirdness: 0,
       
@@ -27,9 +27,11 @@ export default class SelectionContainer extends Component {
   setWeirdness = (weirdness) => {
     this.setState({
       weirdness: weirdness,
+      gifUrl: "https://api.giphy.com/v1/gifs/translate?api_key=22yty9FIPGbEixUWW3U9UpR9QzOx1iCK&" + `s=${this.state.search}` + `&weirdness=${weirdness}`,
     },
     () => {
       this.getGif();
+      console.log(this.state.gifUrl)
     }
     )
   }
