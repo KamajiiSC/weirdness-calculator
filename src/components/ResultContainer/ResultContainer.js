@@ -47,7 +47,7 @@ export default class ResultContainer extends Component {
         </div>
         <div className="slider-container">
           <Slider onChange={this.props.setWeirdness} min={0} max={10} step={1} marks={marks}/>
-          <p className="slider-value">Weirdness: 0</p>
+          <p className="slider-value">Weirdness: {this.props.weirdness}</p>
         </div>
 
       </div>

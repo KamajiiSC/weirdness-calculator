@@ -67,7 +67,7 @@ export default class SelectionContainer extends Component {
       <div className="selection-container">
         <SearchContainer setSearch={this.setSearch} />
         <hr className="selection-divider" />
-        <ResultContainer setWeirdness={this.setWeirdness} returnGif={this.state.returnGif}/>
+        <ResultContainer weirdness={this.state.weirdness} setWeirdness={this.setWeirdness} returnGif={this.state.returnGif}/>
       </div>
     )
   }
