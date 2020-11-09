@@ -6,6 +6,7 @@ export default class SearchContainer extends Component {
   // Handles the form and its data after submit, grabs input value and passes upstream to setSearch
   handleSubmit = (e) =>{
     this.props.setSearch(e.target.firstChild.value)
+
     e.preventDefault();
   }
 

@@ -30,7 +30,6 @@ export default class ResultContainer extends Component {
 
   componentDidUpdate(prevProps) {
     if (this.props.returnGif !== prevProps.returnGif) {
-      console.log(this.props.returnGif)
       this.setState({
         returnGif: this.props.returnGif
       })

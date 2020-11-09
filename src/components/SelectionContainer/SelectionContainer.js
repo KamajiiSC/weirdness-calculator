@@ -9,6 +9,9 @@ export default class SelectionContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      // Weirdness for api url
+      weirdness: 0,
+      
       // Url to fetch request from API
       gifUrl:"https://api.giphy.com/v1/gifs/translate?api_key=22yty9FIPGbEixUWW3U9UpR9QzOx1iCK&" + "s=example",
 
@@ -24,7 +27,7 @@ export default class SelectionContainer extends Component {
 
     }, // setState is async so only after state is set, run this function that then runs getGif 
     () => {
-      this.getGif()
+      this.getGif();
     } 
     )
   }
@@ -34,9 +37,8 @@ export default class SelectionContainer extends Component {
     fetch(this.state.gifUrl)
       .then(response => response.json())
       .then(data => {
-        this.setState({ returnGif: data.data.images.downsized_large.url});
         console.log(data)
-        console.log(this.state.gifUrl)
+        this.setState({ returnGif: data.data.images.downsized_large.url});
         })
   }
 
