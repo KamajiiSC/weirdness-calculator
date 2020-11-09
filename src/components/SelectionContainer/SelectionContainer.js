@@ -13,7 +13,7 @@ export default class SelectionContainer extends Component {
       gifUrl:"https://api.giphy.com/v1/gifs/translate?api_key=22yty9FIPGbEixUWW3U9UpR9QzOx1iCK&s=Hello",
 
       // Url to embed into page of GIF
-      returnGif: {}
+      returnGif: ""
     };
   }
 
@@ -22,7 +22,7 @@ export default class SelectionContainer extends Component {
     fetch(this.state.gifUrl)
       .then(response => response.json())
       .then(data => {
-        this.setState({ returnGif: data.data});
+        this.setState({ returnGif: data.data.images.downsized_large.url});
         })
       .then(console.log("hell"))
   }
