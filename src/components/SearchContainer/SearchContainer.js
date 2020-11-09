@@ -26,7 +26,7 @@ export default class SearchContainer extends Component {
         <section className="search">
           <label htmlFor="search-bar">Search term</label>
           <form onSubmit={this.handleSubmit} className="input-and-btn">
-            <input type="text" id="search-bar"/>
+            <input required type="text" id="search-bar"/>
             <button id="search-button">Search</button>
           </form>
         </section>
