@@ -4,7 +4,7 @@ import './SearchContainer.css';
 export default class SearchContainer extends Component {
 
   handleSubmit = (e) =>{
-    console.log(e.target.firstChild.value)
+    this.props.setSearch(e.target.firstChild.value)
 
     e.preventDefault();
   }
