@@ -40,7 +40,7 @@ export default class SelectionContainer extends Component {
     this.setState({
       search: newSearch, 
       // Set new api request url s=newsearchterm
-      gifUrl: "https://api.giphy.com/v1/gifs/translate?api_key=22yty9FIPGbEixUWW3U9UpR9QzOx1iCK&" + `s=${newSearch}`,
+      gifUrl: "https://api.giphy.com/v1/gifs/translate?api_key=22yty9FIPGbEixUWW3U9UpR9QzOx1iCK&" + `s=${newSearch}` + `&weirdness=${this.state.weirdness}`,
 
     }, // setState is async so only after state is set, run this function that then runs getGif 
     () => {
