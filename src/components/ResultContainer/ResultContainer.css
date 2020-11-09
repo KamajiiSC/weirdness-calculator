@@ -10,7 +10,8 @@
   margin-bottom: 0;
 }
 .result-display{
-  width:30%;
+  width:50%;
+  height:15em;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -20,6 +21,7 @@
 }
 .gif-display{
   width: 75%;
+  max-height:15em;
   margin-right: auto;
   margin-left: auto;
 }
