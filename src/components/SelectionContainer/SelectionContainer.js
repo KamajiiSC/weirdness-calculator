@@ -19,14 +19,17 @@ export default class SelectionContainer extends Component {
 
   setSearch = (newSearch) => {
     this.setState({
+      // Set new api request url s=newsearchterm
       gifUrl: "https://api.giphy.com/v1/gifs/translate?api_key=22yty9FIPGbEixUWW3U9UpR9QzOx1iCK&" + `s=${newSearch}`,
-    }, () => {
+
+    }, // setState is async so only after state is set, run this function that then runs getGif 
+    () => {
       this.getGif()
     } 
     )
   }
 
-  // Function sends fetch request to gifUrl then sets embedUrl in state to returned embed url
+  // Function sends fetch request to gifUrl then sets returnGif to the downsized_large url for the returned gif, downsized urls evade cors errors
   getGif = () => {
     fetch(this.state.gifUrl)
       .then(response => response.json())
