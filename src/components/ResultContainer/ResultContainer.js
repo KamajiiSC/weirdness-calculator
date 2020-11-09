@@ -46,7 +46,7 @@ export default class ResultContainer extends Component {
           <button type="submit">Like</button>
         </div>
         <div className="slider-container">
-          <Slider min={0} max={10} step={1} marks={marks}/>
+          <Slider onChange={this.props.setWeirdness} min={0} max={10} step={1} marks={marks}/>
           <p className="slider-value">Weirdness: 0</p>
         </div>
 

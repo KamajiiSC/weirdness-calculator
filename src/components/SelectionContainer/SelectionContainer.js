@@ -20,6 +20,12 @@ export default class SelectionContainer extends Component {
     };
   }
 
+  setWeirdness = (weirdness) => {
+    this.setState({
+      weirdness: weirdness,
+    })
+  }
+
   setSearch = (newSearch) => {
     this.setState({
       // Set new api request url s=newsearchterm
@@ -47,7 +53,7 @@ export default class SelectionContainer extends Component {
       <div className="selection-container">
         <SearchContainer setSearch={this.setSearch} />
         <hr className="selection-divider" />
-        <ResultContainer returnGif={this.state.returnGif}/>
+        <ResultContainer setWeirdness={this.setWeirdness} returnGif={this.state.returnGif}/>
       </div>
     )
   }
