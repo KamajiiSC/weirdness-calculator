@@ -17,20 +17,24 @@ export default class SelectionContainer extends Component {
     };
   }
 
+  setSearch = (newSearch) => {
+    console.log(newSearch)
+  }
+
   // Function sends fetch request to gifUrl then sets embedUrl in state to returned embed url
   getGif = () => {
     fetch(this.state.gifUrl)
       .then(response => response.json())
       .then(data => {
         this.setState({ returnGif: data.data.images.downsized_large.url});
+        console.log(data)
         })
-      .then(console.log("hell"))
   }
 
   render(){
     return(
       <div className="selection-container">
-        <SearchContainer getGif={this.getGif} />
+        <SearchContainer setSearch={this.setSearch} getGif={this.getGif} />
         <hr className="selection-divider" />
         <ResultContainer returnGif={this.state.returnGif}/>
       </div>
