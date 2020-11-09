@@ -9,7 +9,10 @@ export default class SelectionContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // Weirdness for api url
+      // Search term for url
+      search: '',
+      
+      // Weirdness for url
       weirdness: 0,
       
       // Url to fetch request from API
@@ -33,6 +36,7 @@ export default class SelectionContainer extends Component {
 
   setSearch = (newSearch) => {
     this.setState({
+      search: newSearch, 
       // Set new api request url s=newsearchterm
       gifUrl: "https://api.giphy.com/v1/gifs/translate?api_key=22yty9FIPGbEixUWW3U9UpR9QzOx1iCK&" + `s=${newSearch}`,
 
