@@ -3,6 +3,11 @@ import './SearchContainer.css';
 
 export default class SearchContainer extends Component {
 
+  handleSubmit = (e) =>{
+    console.log(e.target.firstChild.value)
+
+    e.preventDefault();
+  }
 
   render() {
     return(
@@ -19,10 +24,10 @@ export default class SearchContainer extends Component {
 
         <section className="search">
           <label htmlFor="search-bar">Search term</label>
-          <div className="input-and-btn">
+          <form onSubmit={this.handleSubmit} className="input-and-btn">
             <input type="text" id="search-bar"/>
             <button onClick={this.props.getGif} id="search-button">Search</button>
-          </div>
+          </form>
         </section>
       </div>
     )
