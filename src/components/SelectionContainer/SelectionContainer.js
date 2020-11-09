@@ -24,7 +24,11 @@ export default class SelectionContainer extends Component {
   setWeirdness = (weirdness) => {
     this.setState({
       weirdness: weirdness,
-    })
+    },
+    () => {
+      this.getGif();
+    }
+    )
   }
 
   setSearch = (newSearch) => {
