@@ -20,6 +20,7 @@ export default class SelectionContainer extends Component {
     };
   }
 
+  // Sets weirdness in state when slider calls function
   setWeirdness = (weirdness) => {
     this.setState({
       weirdness: weirdness,
