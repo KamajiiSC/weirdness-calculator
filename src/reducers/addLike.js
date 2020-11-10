@@ -9,15 +9,15 @@ const addLike = (state = { likedGifs: []}, action) => {
       if(state.likedGifs.length < 5) {
         return {
           ...state,
-            likedGifs: [...state.likedGifs, {weirdness: action.payload}]
+            likedGifs: [...state.likedGifs, {url: action.payloadUrl}]
         }
       }
-      
+
       // If you already have 5 items then replace the last item with an object
       else{
         return{
           ...state,
-            likedGifs: [...state.likedGifs.fill({weirdness: 2}, -1)]
+            likedGifs: [...state.likedGifs.fill({url: action.payloadUrl}, -1)]
         }
       }
       
