@@ -29,7 +29,7 @@ export default class SelectionContainer extends Component {
       // Save weirdness in state
       weirdness: weirdness,
       // Set new api request url weirdness=new weirdness score
-      gifUrl: "https://api.giphy.com/v1/gifs/translate?api_key=22yty9FIPGbEixUWW3U9UpR9QzOx1iCK&" + `s=${this.state.search}` + `&weirdness=${weirdness}`,
+      gifUrl: "https://api.giphy.com/v1/gifs/translate?api_key=22yty9FIPGbEixUWW3U9UpR9QzOx1iCK&" + `s=${this.state.search || "example"}` + `&weirdness=${weirdness}`,
     },
     () => {
       this.getGif();
