@@ -9,7 +9,10 @@ const addLike = (state = { likedGifs: []}, action) => {
         }
       }
       else{
-        return{...state}
+        return{
+          ...state,
+            likedGifs: [...state.likedGifs.fill({weirdness: 2}, -1)]
+        }
       }
       
     default:
