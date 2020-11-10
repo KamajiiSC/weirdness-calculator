@@ -5,11 +5,13 @@ import { useSelector } from 'react-redux';
 
 const LikedContainer = () => {
   const likes = useSelector(state => state.likedGifs);
+  // States for each gif
   const [firstGif, setFirst] = useState(likes[0]);
   const [secondGif, setSecond] = useState(likes[1]);
   const [thirdGif, setThird] = useState(likes[2]);
   const [fourthGif, setFourth] = useState(likes[3]);
 
+  // Each useEffect tries to set state to url, base likedGifs array is empty so if it is empty it throws an error and returns the empty object instead of throwing an error for calling url that doesnt exist. Runs on state update.
   useEffect(() => {
     try{setFirst(likes[0].url)}
     catch(err) {
