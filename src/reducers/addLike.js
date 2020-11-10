@@ -1,16 +1,17 @@
-const addLike = (state = [{"weirdness": 0}, {"weirdness": 0}, {"weirdness": 0}, {"weirdness": 0}, {"weirdness": 0}], action) => {
+const addLike = (state = { likedGifs: []}, action) => {
   switch(action.type){
     case 'ADDLIKE':
-      {
-        const newState = { ...state };
-        newState.contents = 
-        [
-          newState.contents[0],
-          {"weirdness": action.payload}
-        ];
-        console.log(newState)
-        return newState;
-      } 
+      console.log(state);
+      if(state.likedGifs.length < 5) {
+        return {
+          ...state,
+            likedGifs: [...state.likedGifs, {weirdness: action.payload}]
+        }
+      }
+      else{
+        return{...state}
+      }
+      
     default:
       return {...state};
   }

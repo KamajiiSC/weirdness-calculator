@@ -22,13 +22,13 @@ const marks = {
 }
 
 const ResultContainer = (props) => {
-
+  const dispatch = useDispatch();
   const [returnGif, setGif] = useState('gif');
 
   useEffect(() => {
     setGif(props.returnGif);
   });
-
+  
   // constructor(props) {
   //   super(props);
   //   this.state = {
@@ -49,7 +49,7 @@ const ResultContainer = (props) => {
       <div className="result-display">
         <p className="gif-name">example</p>
         <img crossOrigin="Anonymous" src={returnGif || placeholder} alt="Placeholder for GIF results" className="gif-display"/>
-        <button type="submit">Like</button>
+        <button onClick={() => dispatch(addLike())} type="submit">Like</button>
       </div>
       <div className="slider-container">
         <Slider onChange={props.setWeirdness} min={0} max={10} step={1} marks={marks}/>
