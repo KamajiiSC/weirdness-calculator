@@ -10,6 +10,7 @@ const LikedContainer = () => {
   const [secondGif, setSecond] = useState(likes[1]);
   const [thirdGif, setThird] = useState(likes[2]);
   const [fourthGif, setFourth] = useState(likes[3]);
+  const [remaining, setRemaining] = useState(5 - likes.length)
 
   // Each useEffect tries to set state to url, base likedGifs array is empty so if it is empty it throws an error and returns the empty object instead of throwing an error for calling url that doesnt exist. Runs on state update.
   useEffect(() => {
@@ -44,6 +45,10 @@ const LikedContainer = () => {
     console.log(likes[3])
   }, [useSelector(state => state.likedGifs)])
 
+  useEffect(() => {
+    setRemaining(5 - likes.length)
+  }, [likes])
+
   return(
     <div className="liked-layout-container">
       <div className="liked-container">
@@ -56,7 +61,7 @@ const LikedContainer = () => {
         </div>
         <div className="calc-btn-desc">
           <button>CALCULATE MY WEIRDNESS SCORE</button>
-          <p>You must like x more GIFs to calculate your score</p>
+          <p>You must like {remaining} more GIFs to calculate your score</p>
         </div>
       </div>
     </div>
