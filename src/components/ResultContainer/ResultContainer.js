@@ -24,9 +24,11 @@ const marks = {
 const ResultContainer = (props) => {
   const dispatch = useDispatch();
   const [returnGif, setGif] = useState('gif');
+  const [weirdness, setWeirdness] = useState(0);
 
   useEffect(() => {
     setGif(props.returnGif);
+    setWeirdness(props.weirdness);
   });
 
   return(
