@@ -8,6 +8,7 @@ const addLike = (state = [{"weirdness": 0}, {"weirdness": 0}, {"weirdness": 0}, 
           newState.contents[0],
           {"weirdness": action.payload}
         ];
+        console.log(newState)
         return newState;
       } 
   }

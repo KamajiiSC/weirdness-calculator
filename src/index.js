@@ -5,12 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createStore } from 'redux';
 import addLike from './reducers';
+import { Provider } from 'react-redux';
 
-const store = createStore(addLike);
+const likedStore = createStore(addLike);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={likedStore}>
+     <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
