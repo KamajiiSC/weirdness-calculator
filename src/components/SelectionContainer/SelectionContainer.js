@@ -54,6 +54,7 @@ export default class SelectionContainer extends Component {
 
   // Function sends fetch request to gifUrl then sets returnGif to the downsized_large url for the returned gif, downsized urls evade cors errors
   getGif = () => {
+    console.log(this.state.gifUrl)
     fetch(this.state.gifUrl)
       .then(response => response.json())
       .then(data => {

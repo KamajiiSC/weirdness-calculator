@@ -23,13 +23,15 @@ const marks = {
 
 const ResultContainer = (props) => {
   const dispatch = useDispatch();
-  const [returnGif, setGif] = useState('gif');
+  const [returnGif, setGif] = useState(props.returnGif);
   const [weirdness, setWeirdness] = useState(0);
 
   useEffect(() => {
     setGif(props.returnGif);
+  }, [props.returnGif])
+  useEffect(() => {
     setWeirdness(props.weirdness);
-  });
+  }, [props.weirdness])
 
   return(
     <div className="result-container">
