@@ -9,7 +9,7 @@ const addLike = (state = { likedGifs: []}, action) => {
       if(state.likedGifs.length < 5) {
         return {
           ...state,
-            likedGifs: [...state.likedGifs, {url: action.payloadUrl}]
+            likedGifs: [...state.likedGifs, {url: action.payloadUrl, weirdness: action.payloadWeird}]
         }
       }
 
@@ -17,7 +17,7 @@ const addLike = (state = { likedGifs: []}, action) => {
       else{
         return{
           ...state,
-            likedGifs: [...state.likedGifs.fill({url: action.payloadUrl}, -1)]
+            likedGifs: [...state.likedGifs.fill({url: action.payloadUrl, weirdness: action.payloadWeird}, -1)]
         }
       }
       
