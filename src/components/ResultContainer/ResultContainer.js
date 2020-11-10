@@ -28,21 +28,7 @@ const ResultContainer = (props) => {
   useEffect(() => {
     setGif(props.returnGif);
   });
-  
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     returnGif: ""
-  //   }
-  // }
 
-  // componentDidUpdate(prevProps) {
-  //   if (this.props.returnGif !== prevProps.returnGif) {
-  //     this.setState({
-  //       returnGif: this.props.returnGif
-  //     })
-  //   }
-  // }
   return(
     <div className="result-container">
       <h2>YOUR RESULT</h2>
