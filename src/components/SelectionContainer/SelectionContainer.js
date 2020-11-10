@@ -59,7 +59,9 @@ export default class SelectionContainer extends Component {
       .then(response => response.json())
       .then(data => {
         console.log(data)
-        this.setState({ returnGif: data.data.images.downsized_large.url});
+        if(data.data.images.downsized_large.url){
+          this.setState({ returnGif: data.data.images.downsized_large.url});
+        }
         })
   }
 
