@@ -64,7 +64,7 @@ export default class SelectionContainer extends Component {
         console.log(data)
         if(data !== []){
           this.setState({ returnGif: data.data.images.downsized_large.url});
-          this.setState({ name: data.data.title.substring(0, 19) })
+          this.setState({ name: data.data.title})
           console.log(this.state.name)
         }
         })
@@ -75,7 +75,7 @@ export default class SelectionContainer extends Component {
       <div className="selection-container">
         <SearchContainer setSearch={this.setSearch} />
         <hr className="selection-divider" />
-        <ResultContainer weirdness={this.state.weirdness} setWeirdness={this.setWeirdness} returnGif={this.state.returnGif}/>
+        <ResultContainer name={this.state.name} weirdness={this.state.weirdness} setWeirdness={this.setWeirdness} returnGif={this.state.returnGif}/>
       </div>
     )
   }
