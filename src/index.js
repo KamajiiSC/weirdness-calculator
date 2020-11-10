@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createStore } from 'redux';
-import addLike from './reducers';
+import addLike from './reducers/addLike';
 import { Provider } from 'react-redux';
 
 const likedStore = createStore(addLike);

@@ -11,6 +11,8 @@ const addLike = (state = [{"weirdness": 0}, {"weirdness": 0}, {"weirdness": 0}, 
         console.log(newState)
         return newState;
       } 
+    default:
+      return {...state};
   }
 }
 

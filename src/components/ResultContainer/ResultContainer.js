@@ -1,8 +1,10 @@
-import React, {Component} from 'react';
+import React, { useEffect, useState } from 'react';
 import './ResultContainer.css';
 import placeholder from '../../resources/placeholder-image.png';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
+import { useDispatch } from 'react-redux';
+import { addLike } from '../../actions';
 
 // Marks underneath slider
 const marks = {
@@ -19,38 +21,43 @@ const marks = {
   10: 10
 }
 
-export default class ResultContainer extends Component {
+const ResultContainer = (props) => {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      returnGif: ""
-    }
-  }
+  const [returnGif, setGif] = useState('gif');
 
-  componentDidUpdate(prevProps) {
-    if (this.props.returnGif !== prevProps.returnGif) {
-      this.setState({
-        returnGif: this.props.returnGif
-      })
-    }
-  }
+  useEffect(() => {
+    setGif(props.returnGif);
+  });
 
-  render() {
-    return(
-      <div className="result-container">
-        <h2>YOUR RESULT</h2>
-        <div className="result-display">
-          <p className="gif-name">example</p>
-          <img crossOrigin="Anonymous" src={this.state.returnGif || placeholder} alt="Placeholder for GIF results" className="gif-display"/>
-          <button type="submit">Like</button>
-        </div>
-        <div className="slider-container">
-          <Slider onChange={this.props.setWeirdness} min={0} max={10} step={1} marks={marks}/>
-          <p className="slider-value">Weirdness: {this.props.weirdness}</p>
-        </div>
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     returnGif: ""
+  //   }
+  // }
 
+  // componentDidUpdate(prevProps) {
+  //   if (this.props.returnGif !== prevProps.returnGif) {
+  //     this.setState({
+  //       returnGif: this.props.returnGif
+  //     })
+  //   }
+  // }
+  return(
+    <div className="result-container">
+      <h2>YOUR RESULT</h2>
+      <div className="result-display">
+        <p className="gif-name">example</p>
+        <img crossOrigin="Anonymous" src={returnGif || placeholder} alt="Placeholder for GIF results" className="gif-display"/>
+        <button type="submit">Like</button>
       </div>
-    )
-  }
+      <div className="slider-container">
+        <Slider onChange={props.setWeirdness} min={0} max={10} step={1} marks={marks}/>
+        <p className="slider-value">Weirdness: {props.weirdness}</p>
+      </div>
+
+    </div>
+  )
 };
+
+export default ResultContainer;
