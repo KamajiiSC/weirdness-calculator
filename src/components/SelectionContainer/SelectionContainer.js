@@ -62,6 +62,7 @@ export default class SelectionContainer extends Component {
       .then(response => response.json())
       .then(data => {
         console.log(data)
+        // If data is not an empty array then set state 
         if(data !== []){
           this.setState({ returnGif: data.data.images.downsized_large.url});
           this.setState({ name: data.data.title})
