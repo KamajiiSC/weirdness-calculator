@@ -1,6 +1,7 @@
-export const addLike = (newItem) => {
+export const addLike = (url, weird) => {
   return {
     type: "ADDLIKE",
-    payloadUrl: newItem
+    payloadUrl: url,
+    payloadWeird: weird
   }
 } 
