@@ -1,5 +1,6 @@
-export const addLike = () => {
+export const addLike = (newItem) => {
   return {
-    type: "ADDLIKE"
+    type: "ADDLIKE",
+    payload: 5
   }
-}
+} 
