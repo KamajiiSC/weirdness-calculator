@@ -55,6 +55,48 @@ const LikedContainer = () => {
   useEffect(() => {
     setRemaining(5 - likes.length)
   }, [likes])
+  
+  // Name useEffects
+  useEffect(() => {
+    try{setFirstName(likes[0].name)}
+    catch(err) {
+      setFirstName("example")
+    }
+    console.log(likes[0])
+  }, [useSelector(state => state.likedGifs)])
+
+  useEffect(() => {
+    try{setSecondName(likes[1].name)}
+    catch(err) {
+      setSecondName("example")
+    }
+    console.log(likes[1])
+  }, [useSelector(state => state.likedGifs)])
+
+  useEffect(() => {
+    try{setThirdName(likes[2].name)}
+    catch(err) {
+      setThirdName("example")
+    }
+    console.log(likes[2])
+  }, [useSelector(state => state.likedGifs)])
+
+  useEffect(() => {
+    try{setFourthName(likes[3].name)}
+    catch(err) {
+      setFourthName("example")
+    }
+    console.log(likes[3])
+  }, [useSelector(state => state.likedGifs)])
+
+  useEffect(() => {
+    try{setFifthName(likes[4].name)}
+    catch(err) {
+      setFifthName("example")
+    }
+    console.log(likes[4])
+  }, [useSelector(state => state.likedGifs)])
+
 
   return(
     <div className="liked-layout-container">
