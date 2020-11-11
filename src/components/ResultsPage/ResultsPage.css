@@ -8,3 +8,9 @@
   margin-top:7%;
   text-align: center;
 }
+
+.button-container{
+  margin-top:10%;
+  display: flex;
+  justify-content: center;
+}

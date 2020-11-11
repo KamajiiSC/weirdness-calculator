@@ -160,7 +160,9 @@ const ResultsPage = () => {
         <div><p>{fourthName || "example"}</p><img src={fourthGif} alt="Place holder for selected GIFs"/><p>{fourthWeird || 0}/10</p></div>
         <div><p>{fifthName || "example"}</p><img src={fifthGif} alt="Place holder for selected GIFs"/><p>{fifthWeird || 0}/10</p></div>       
       </div>
-      <Link to="/"><button onClick={() => dispatch(emptyLike())}>START OVER</button></Link>
+      <div className="button-container">
+        <Link className="start-over" to="/"><button onClick={() => dispatch(emptyLike())}>START OVER</button></Link>
+      </div>
     </div>
   )
 };
