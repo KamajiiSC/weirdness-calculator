@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './LikedContainer.css';
 import placeholder from '../../resources/placeholder-image.png';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { removeFirst } from '../../actions';
 
 const LikedContainer = () => {
+  const dispatch = useDispatch();
   const likes = useSelector(state => state.likedGifs);
   // States for each gif
   const [firstGif, setFirst] = useState(likes[0]);
@@ -93,7 +95,7 @@ const LikedContainer = () => {
       <div className="liked-container">
         <h2>YOUR LIKED GIFS</h2>
         <div className="liked-list">
-          <div className="liked-list-item"> <p>{firstName || "example"}</p><img src={firstGif || placeholder} alt="Place holder for selected GIFs"/><button onClick={}>remove</button> </div>
+          <div className="liked-list-item"> <p>{firstName || "example"}</p><img src={firstGif || placeholder} alt="Place holder for selected GIFs"/><button onClick={() => dispatch(removeFirst)}>remove</button> </div>
           <div className="liked-list-item"> <p>{secondName || "example"}</p><img src={secondGif || placeholder} alt="Place holder for selected GIFs"/><button onClick={}>remove</button> </div>
           <div className="liked-list-item"> <p>{thirdName || "example"}</p><img src={thirdGif || placeholder} alt="Place holder for selected GIFs"/><button onClick={}>remove</button> </div>
           <div className="liked-list-item"> <p>{fourthName || "example"}</p><img src={fourthGif || placeholder} alt="Place holder for selected GIFs"/><button onClick={}>remove</button> </div>
