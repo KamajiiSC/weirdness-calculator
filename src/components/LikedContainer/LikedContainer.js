@@ -93,10 +93,10 @@ const LikedContainer = () => {
       <div className="liked-container">
         <h2>YOUR LIKED GIFS</h2>
         <div className="liked-list">
-          <div className="liked-list-item"> <p>{firstName || "example"}</p><img src={firstGif || placeholder} alt="Place holder for selected GIFs"/><button>remove</button> </div>
-          <div className="liked-list-item"> <p>{secondName || "example"}</p><img src={secondGif || placeholder} alt="Place holder for selected GIFs"/><button>remove</button> </div>
-          <div className="liked-list-item"> <p>{thirdName || "example"}</p><img src={thirdGif || placeholder} alt="Place holder for selected GIFs"/><button>remove</button> </div>
-          <div className="liked-list-item"> <p>{fourthName || "example"}</p><img src={fourthGif || placeholder} alt="Place holder for selected GIFs"/><button>remove</button> </div>
+          <div className="liked-list-item"> <p>{firstName || "example"}</p><img src={firstGif || placeholder} alt="Place holder for selected GIFs"/><button onClick={}>remove</button> </div>
+          <div className="liked-list-item"> <p>{secondName || "example"}</p><img src={secondGif || placeholder} alt="Place holder for selected GIFs"/><button onClick={}>remove</button> </div>
+          <div className="liked-list-item"> <p>{thirdName || "example"}</p><img src={thirdGif || placeholder} alt="Place holder for selected GIFs"/><button onClick={}>remove</button> </div>
+          <div className="liked-list-item"> <p>{fourthName || "example"}</p><img src={fourthGif || placeholder} alt="Place holder for selected GIFs"/><button onClick={}>remove</button> </div>
         </div>
         <div className="calc-btn-desc">
           <Link to="/results"><button disabled={remaining > 0} >CALCULATE MY WEIRDNESS SCORE</button></Link>

@@ -19,3 +19,8 @@ export const removeLike = (index) => {
     payloadIndex: index
   }
 }
+export const removeFirst = () => {
+  return{
+    type: "REMOVEFIRST"
+  }
+}
