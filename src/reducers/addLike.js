@@ -30,8 +30,10 @@ const addLike = (state = { likedGifs: []}, action) => {
         
       }
     case 'REMOVEFIRST':
+      // Destructure likedGifs list into first and rest then return just the rest
+      const [first, ...rest] = state.likedGifs;
       return{
-
+       likedGifs: rest,
       }
       
     default:
