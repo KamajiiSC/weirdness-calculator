@@ -1,10 +1,23 @@
+.results-list{
+  width: 95vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+.liked-item{
+  display: flex;
+  flex-direction: column;
+}
+h2{
+  text-align: center;
+  margin-top:2%;
+  font-size: 1.6em;
+}
+
 .liked-list-results{
   display:grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 5%;
-  width: 95vw;
-  margin-left: auto;
-  margin-right: auto;
+
   margin-top:7%;
   text-align: center;
 }

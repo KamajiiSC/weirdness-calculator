@@ -152,14 +152,16 @@ const ResultsPage = () => {
   return(
     <div>
       <h2>You scored a(n) {Math.floor((firstWeird + secondWeird + thirdWeird + fourthWeird + fifthWeird) / 5)} out of 10 on the weirdness scale!</h2>
-      <h4>The GIFs you liked</h4>
-      <div className="liked-list-results">
-        <div><p>{firstName || "example"}</p><img src={firstGif} alt="Place holder for selected GIFs"/><p>{firstWeird || 0}/10</p></div>
-        <div><p>{secondName || "example"}</p><img src={secondGif} alt="Place holder for selected GIFs"/><p>{secondWeird || 0}/10</p></div>
-        <div><p>{thirdName || "example"}</p><img src={thirdGif} alt="Place holder for selected GIFs"/><p>{thirdWeird || 0}/10</p></div>
-        <div><p>{fourthName || "example"}</p><img src={fourthGif} alt="Place holder for selected GIFs"/><p>{fourthWeird || 0}/10</p></div>
-        <div><p>{fifthName || "example"}</p><img src={fifthGif} alt="Place holder for selected GIFs"/><p>{fifthWeird || 0}/10</p></div>       
-      </div>
+      <section className="results-list">
+        <h4>The GIFs you liked</h4>
+        <div className="liked-list-results">
+          <div className="liked-item"><p>{firstName || "example"}</p><img src={firstGif} alt="Place holder for selected GIFs"/><p>{firstWeird || 0}/10</p></div>
+          <div className="liked-item"><p>{secondName || "example"}</p><img src={secondGif} alt="Place holder for selected GIFs"/><p>{secondWeird || 0}/10</p></div>
+          <div className="liked-item"><p>{thirdName || "example"}</p><img src={thirdGif} alt="Place holder for selected GIFs"/><p>{thirdWeird || 0}/10</p></div>
+          <div className="liked-item"><p>{fourthName || "example"}</p><img src={fourthGif} alt="Place holder for selected GIFs"/><p>{fourthWeird || 0}/10</p></div>
+          <div className="liked-item"><p>{fifthName || "example"}</p><img src={fifthGif} alt="Place holder for selected GIFs"/><p>{fifthWeird || 0}/10</p></div>       
+        </div>
+      </section>
       <div className="button-container">
         <Link className="start-over" to="/"><button onClick={() => dispatch(emptyLike())}>START OVER</button></Link>
       </div>
