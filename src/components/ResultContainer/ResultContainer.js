@@ -5,6 +5,7 @@ import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import { useDispatch } from 'react-redux';
 import { addLike } from '../../actions';
+import Thumb from '../../resources/thumbs-up.png';
 
 // Marks underneath slider
 const marks = {
@@ -43,7 +44,7 @@ const ResultContainer = (props) => {
       <div className="result-display">
         <p className="gif-name">{props.name || "example"}</p>
         <img crossOrigin="Anonymous" src={returnGif || placeholder} alt="Placeholder for GIF results" className="gif-display"/>
-        <button onClick={() => dispatch(addLike(returnGif, weirdness, name))} type="submit">Like</button>
+        <button onClick={() => dispatch(addLike(returnGif, weirdness, name))} type="submit"><img className="thumb-button" src={Thumb} /></button>
       </div>
       <div className="slider-container">
         <Slider onChange={props.setWeirdness} min={0} max={10} step={1} marks={marks}/>
