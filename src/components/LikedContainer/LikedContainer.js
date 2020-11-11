@@ -17,7 +17,6 @@ const LikedContainer = () => {
   const [secondName, setSecondName] = useState("example");
   const [thirdName, setThirdName] = useState("example");
   const [fourthName, setFourthName] = useState("example");
-  const [fifthName, setFifthName] = useState("example");
 
   // Each useEffect tries to set state to url, base likedGifs array is empty so if it is empty it throws an error and returns the empty object instead of throwing an error for calling url that doesnt exist. Runs on state update.
   useEffect(() => {
@@ -55,7 +54,7 @@ const LikedContainer = () => {
   useEffect(() => {
     setRemaining(5 - likes.length)
   }, [likes])
-  
+
   // Name useEffects
   useEffect(() => {
     try{setFirstName(likes[0].name)}
@@ -89,24 +88,15 @@ const LikedContainer = () => {
     console.log(likes[3])
   }, [useSelector(state => state.likedGifs)])
 
-  useEffect(() => {
-    try{setFifthName(likes[4].name)}
-    catch(err) {
-      setFifthName("example")
-    }
-    console.log(likes[4])
-  }, [useSelector(state => state.likedGifs)])
-
-
   return(
     <div className="liked-layout-container">
       <div className="liked-container">
         <h2>YOUR LIKED GIFS</h2>
         <div className="liked-list">
-          <div className="liked-list-item"> <img src={firstGif || placeholder} alt="Place holder for selected GIFs"/> <button>remove</button> </div>
-          <div className="liked-list-item"> <img src={secondGif || placeholder} alt="Place holder for selected GIFs"/> <button>remove</button> </div>
-          <div className="liked-list-item"> <img src={thirdGif || placeholder} alt="Place holder for selected GIFs"/> <button>remove</button> </div>
-          <div className="liked-list-item"> <img src={fourthGif || placeholder} alt="Place holder for selected GIFs"/> <button>remove</button> </div>
+          <div className="liked-list-item"> <p>{firstName || "example"}</p><img src={firstGif || placeholder} alt="Place holder for selected GIFs"/><button>remove</button> </div>
+          <div className="liked-list-item"> <p>{secondName || "example"}</p><img src={secondGif || placeholder} alt="Place holder for selected GIFs"/><button>remove</button> </div>
+          <div className="liked-list-item"> <p>{thirdName || "example"}</p><img src={thirdGif || placeholder} alt="Place holder for selected GIFs"/><button>remove</button> </div>
+          <div className="liked-list-item"> <p>{fourthName || "example"}</p><img src={fourthGif || placeholder} alt="Place holder for selected GIFs"/><button>remove</button> </div>
         </div>
         <div className="calc-btn-desc">
           <Link to="/results"><button disabled={remaining > 0} >CALCULATE MY WEIRDNESS SCORE</button></Link>
