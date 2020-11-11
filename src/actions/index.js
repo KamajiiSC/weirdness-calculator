@@ -12,3 +12,9 @@ export const emptyLike = () => {
     type: "EMPTYLIKE"
   }
 }
+
+export const removeLike = () => {
+  return{
+    type: "REMOVELIKE"
+  }
+}
