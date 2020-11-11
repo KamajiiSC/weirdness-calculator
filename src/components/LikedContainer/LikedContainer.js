@@ -12,6 +12,12 @@ const LikedContainer = () => {
   const [thirdGif, setThird] = useState(likes[2]);
   const [fourthGif, setFourth] = useState(likes[3]);
   const [remaining, setRemaining] = useState(5 - likes.length)
+  // Names for each gif
+  const [firstName, setFirstName] = useState("example");
+  const [secondName, setSecondName] = useState("example");
+  const [thirdName, setThirdName] = useState("example");
+  const [fourthName, setFourthName] = useState("example");
+  const [fifthName, setFifthName] = useState("example");
 
   // Each useEffect tries to set state to url, base likedGifs array is empty so if it is empty it throws an error and returns the empty object instead of throwing an error for calling url that doesnt exist. Runs on state update.
   useEffect(() => {
