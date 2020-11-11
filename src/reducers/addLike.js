@@ -24,6 +24,10 @@ const addLike = (state = { likedGifs: []}, action) => {
       return {
           likedGifs: []
       }
+    case 'REMOVELIKE':
+      return{
+        
+      }
       
     default:
       return {...state};
