@@ -3,7 +3,7 @@ export const addLike = (url, weird, name) => {
     type: "ADDLIKE",
     payloadUrl: url,
     payloadWeird: weird,
-    payloadName: name
+    payloadName: name,
   }
 } 
 
@@ -17,10 +17,5 @@ export const removeLike = (index) => {
   return{
     type: "REMOVELIKE",
     payloadIndex: index
-  }
-}
-export const removeFirst = () => {
-  return{
-    type: "REMOVEFIRST"
   }
 }

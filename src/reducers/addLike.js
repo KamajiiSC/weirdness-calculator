@@ -26,16 +26,10 @@ const addLike = (state = { likedGifs: []}, action) => {
           likedGifs: []
       }
     case 'REMOVELIKE':
+      const newLikedGifs = state.likedGifs.filter((item, index) => action.payloadIndex !== index)
       return{
-        
+        likedGifs: newLikedGifs
       }
-    case 'REMOVEFIRST':
-      // Destructure likedGifs list into first and rest then return just the rest
-      const [first, ...rest] = state.likedGifs;
-      return{
-       likedGifs: rest,
-      }
-      
     default:
       return {...state};
   }
