@@ -44,7 +44,7 @@ const ResultContainer = (props) => {
       <div className="result-display">
         <p className="gif-name">{props.name || "example"}</p>
         <img crossOrigin="Anonymous" src={returnGif || placeholder} alt="Placeholder for GIF results" className="gif-display"/>
-        <button onClick={() => dispatch(addLike(returnGif, weirdness, name))} type="submit"><img className="thumb-button" src={Thumb} /></button>
+        <button className="like-button" onClick={() => dispatch(addLike(returnGif, weirdness, name))} type="submit"><img className="thumb-button" src={Thumb} /></button>
       </div>
       <div className="slider-container">
         <Slider onChange={props.setWeirdness} min={0} max={10} step={1} marks={marks}/>

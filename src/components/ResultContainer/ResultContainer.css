@@ -29,6 +29,14 @@
 .slider-value{
   margin-bottom:0;
 }
+.like-button{
+  background-color: #6e6e6e;
+  border: none;
+  width: 30%;
+  margin-right: auto;
+  margin-left: auto;
+  cursor: pointer;
+}
 
 .thumb-button{
   width:3em;
