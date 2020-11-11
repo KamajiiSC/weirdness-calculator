@@ -55,10 +55,10 @@ const LikedContainer = () => {
       <div className="liked-container">
         <h2>YOUR LIKED GIFS</h2>
         <div className="liked-list">
-          <img src={firstGif || placeholder} alt="Place holder for selected GIFs"/>
-          <img src={secondGif || placeholder} alt="Place holder for selected GIFs"/>
-          <img src={thirdGif || placeholder} alt="Place holder for selected GIFs"/>
-          <img src={fourthGif || placeholder} alt="Place holder for selected GIFs"/>
+          <div className="liked-list-item"> <img src={firstGif || placeholder} alt="Place holder for selected GIFs"/> </div>
+          <div className="liked-list-item"> <img src={secondGif || placeholder} alt="Place holder for selected GIFs"/> </div>
+          <div className="liked-list-item"> <img src={thirdGif || placeholder} alt="Place holder for selected GIFs"/> </div>
+          <div className="liked-list-item"> <img src={fourthGif || placeholder} alt="Place holder for selected GIFs"/> </div>
         </div>
         <div className="calc-btn-desc">
           <Link to="/results"><button disabled={remaining > 0} >CALCULATE MY WEIRDNESS SCORE</button></Link>
