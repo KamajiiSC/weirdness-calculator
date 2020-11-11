@@ -10,20 +10,21 @@
   margin-bottom: 0;
 }
 .result-display{
-  width:50%;
-  height:15em;
+  width:45%;
+  height:12em;
   display: flex;
   flex-direction: column;
   text-align: center;
   margin-right:auto;
   margin-left:auto;
-  margin-bottom: 8%;
+  margin-bottom: 12%;
 }
 .gif-display{
   width: 75%;
-  max-height:15em;
+  max-height:13em;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom:1em;
 }
 .slider-value{
   margin-bottom:0;
