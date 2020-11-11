@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import './ResultsPage.css';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { emptyLike } from'../../actions';
 
 const ResultsPage = () => {
+  const dispatch = useDispatch();
   const likes = useSelector(state => state.likedGifs);
   
   const [firstGif, setFirst] = useState(likes[0]);
@@ -158,7 +160,7 @@ const ResultsPage = () => {
         <div><p>{fourthName || "example"}</p><img src={fourthGif} alt="Place holder for selected GIFs"/><p>{fourthWeird || 0}/10</p></div>
         <div><p>{fifthName || "example"}</p><img src={fifthGif} alt="Place holder for selected GIFs"/><p>{fifthWeird || 0}/10</p></div>       
       </div>
-      <Link to="/"><button>START OVER</button></Link>
+      <Link to="/"><button onClick={() => dispatch(emptyLike())}>START OVER</button></Link>
     </div>
   )
 };

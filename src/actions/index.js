@@ -6,3 +6,9 @@ export const addLike = (url, weird, name) => {
     payloadName: name
   }
 } 
+
+export const emptyLike = () => {
+  return {
+    type: "EMPTYLIKE"
+  }
+}
