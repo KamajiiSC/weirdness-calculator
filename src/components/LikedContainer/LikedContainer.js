@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './LikedContainer.css';
 import placeholder from '../../resources/placeholder-image.png';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const LikedContainer = () => {
   const likes = useSelector(state => state.likedGifs);
@@ -60,7 +61,7 @@ const LikedContainer = () => {
           <img src={fourthGif || placeholder} alt="Place holder for selected GIFs"/>
         </div>
         <div className="calc-btn-desc">
-          <button>CALCULATE MY WEIRDNESS SCORE</button>
+          <Link to="/results"><button>CALCULATE MY WEIRDNESS SCORE</button></Link>
           <p>You must like {remaining} more GIFs to calculate your score</p>
         </div>
       </div>

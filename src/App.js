@@ -15,7 +15,7 @@ function App() {
           </Route>
           
           <Route path="/results">
-
+            <ResultsPage />
           </Route>
         </Switch>
       </Router>
