@@ -13,8 +13,13 @@
 
 #search-bar{
   width:25%;
-  height: 2em;
+  height: 2.1em;
+  background-color: #fafafa;
 }
 #search-button{
+  width:8em;
+  color: white;
   height: 2.5em;
+  background-color: #8b8b8b;
+  border:none;
 }
