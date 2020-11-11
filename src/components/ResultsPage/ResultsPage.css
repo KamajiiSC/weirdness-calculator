@@ -31,3 +31,10 @@ h2{
   display: flex;
   justify-content: center;
 }
+.start-over{
+  background-color: #6e6e6e;
+  border: none;
+  color: white;
+  text-align: center;
+  padding: .5em 1em;
+}
