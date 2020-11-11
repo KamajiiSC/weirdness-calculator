@@ -16,7 +16,7 @@ export default class SelectionContainer extends Component {
       weirdness: 0,
       
       // Url to fetch request from API
-      gifUrl:"https://api.giphy.com/v1/gifs/translate?api_key=22yty9FIPGbEixUWW3U9UpR9QzOx1iCK&" + "s=example",
+      gifUrl:"https://api.giphy.com/v1/gifs/translate?api_key=22yty9FIPGbEixUWW3U9UpR9QzOx1iCK&s=example",
 
       // Url to embed into page of GIF
       returnGif: "",
@@ -32,7 +32,7 @@ export default class SelectionContainer extends Component {
       // Save weirdness in state
       weirdness: weirdness,
       // Set new api request url weirdness=new weirdness score
-      gifUrl: "https://api.giphy.com/v1/gifs/translate?api_key=22yty9FIPGbEixUWW3U9UpR9QzOx1iCK&" + `s=${this.state.search || "example"}` + `&weirdness=${weirdness}`,
+      gifUrl: `https://api.giphy.com/v1/gifs/translate?api_key=22yty9FIPGbEixUWW3U9UpR9QzOx1iCK&s=${this.state.search || "example"}&weirdness=${weirdness}`
     },
     () => {
       this.getGif();
@@ -46,7 +46,7 @@ export default class SelectionContainer extends Component {
       // Save search term in state
       search: newSearch, 
       // Set new api request url s=new search term
-      gifUrl: "https://api.giphy.com/v1/gifs/translate?api_key=22yty9FIPGbEixUWW3U9UpR9QzOx1iCK&" + `s=${newSearch}` + `&weirdness=${this.state.weirdness}`,
+      gifUrl: `https://api.giphy.com/v1/gifs/translate?api_key=22yty9FIPGbEixUWW3U9UpR9QzOx1iCK&s=${newSearch}&weirdness=${this.state.weirdness}`
 
     }, // setState is async so only after state is set, run this function that then runs getGif 
     () => {
@@ -63,7 +63,7 @@ export default class SelectionContainer extends Component {
       .then(data => {
         console.log(data)
         // If data is not an empty array then set state 
-        if(data !== []){
+        if(data.data){
           this.setState({ returnGif: data.data.images.downsized_large.url});
           this.setState({ name: data.data.title})
           console.log(this.state.name)
