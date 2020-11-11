@@ -14,7 +14,7 @@ const ResultsPage = () => {
           <img src="" alt="Place holder for selected GIFs"/>
           <img src="" alt="Place holder for selected GIFs"/>
       </div>
-      <Link><button>START OVER</button></Link>
+      <Link to="/"><button>START OVER</button></Link>
     </div>
   )
 };
