@@ -19,7 +19,7 @@ export default class SearchContainer extends Component {
             We'll show you the least weird ones to start, but you can move the slider to make them weirder.
           </p>
           <p className="desc-section-two">
-            When you find a GIF you like, press the Like button. Once you like 5 GIFs we'll show you how weird you are.
+            When you find a GIF you like, press the <em>Like</em> button. Once you like 5 GIFs we'll show you how weird you are.
           </p>
         </section>
 

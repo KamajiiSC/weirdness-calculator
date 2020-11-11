@@ -102,7 +102,7 @@ const LikedContainer = () => {
         </div>
         <div className="calc-btn-desc">
           <Link to="/results"><button disabled={remaining > 0} >CALCULATE MY WEIRDNESS SCORE</button></Link>
-          <p>You must like {remaining} more GIFs to calculate your score</p>
+          <p>You must <em>Like</em> {remaining} more GIFs to calculate your score</p>
         </div>
       </div>
     </div>
