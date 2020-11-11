@@ -21,6 +21,7 @@ const addLike = (state = { likedGifs: []}, action) => {
         }
       }
     case 'EMPTYLIKE':
+      // Returns empty array
       return {
           likedGifs: []
       }
@@ -30,7 +31,7 @@ const addLike = (state = { likedGifs: []}, action) => {
       }
     case 'REMOVEFIRST':
       return{
-        
+
       }
       
     default:
