@@ -163,7 +163,7 @@ const ResultsPage = () => {
         </div>
       </section>
       <div className="button-container">
-        <Link className="start-over" to="/"><button className="start-over" onClick={() => dispatch(emptyLike())}>START OVER</button></Link>
+        <Link className="start-over-link" to="/"><button className="start-over" onClick={() => dispatch(emptyLike())}>START OVER</button></Link>
       </div>
     </div>
   )
