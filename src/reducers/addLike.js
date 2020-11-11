@@ -28,6 +28,10 @@ const addLike = (state = { likedGifs: []}, action) => {
       return{
         
       }
+    case 'REMOVEFIRST':
+      return{
+        
+      }
       
     default:
       return {...state};
