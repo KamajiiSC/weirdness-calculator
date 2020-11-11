@@ -63,7 +63,7 @@ export default class SelectionContainer extends Component {
       .then(data => {
         console.log(data)
         // If data is not an empty array then set state 
-        if(data.data){
+        if(data.data && data.data.length > 0){
           this.setState({ returnGif: data.data.images.downsized_large.url});
           this.setState({ name: data.data.title})
           console.log(this.state.name)
