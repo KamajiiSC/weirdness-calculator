@@ -27,7 +27,7 @@ const LikedContainer = () => {
       setFirst(likes[0])
     }
     console.log(likes[0])
-  }, [useSelector(state => state.likedGifs)])
+  }, [likes])
 
   useEffect(() => {
     try{setSecond(likes[1].url)}
@@ -35,7 +35,7 @@ const LikedContainer = () => {
       setSecond(likes[1])
     }
     console.log(likes[1])
-  }, [useSelector(state => state.likedGifs)])
+  }, [likes])
 
   useEffect(() => {
     try{setThird(likes[2].url)}
@@ -43,7 +43,7 @@ const LikedContainer = () => {
       setThird(likes[2])
     }
     console.log(likes[2])
-  }, [useSelector(state => state.likedGifs)])
+  }, [likes])
 
   useEffect(() => {
     try{setFourth(likes[3].url)}
@@ -51,7 +51,7 @@ const LikedContainer = () => {
       setFourth(likes[3])
     }
     console.log(likes[3])
-  }, [useSelector(state => state.likedGifs)])
+  }, [likes])
 
   useEffect(() => {
     setRemaining(5 - likes.length)
@@ -64,7 +64,7 @@ const LikedContainer = () => {
       setFirstName("example")
     }
     console.log(likes[0])
-  }, [useSelector(state => state.likedGifs)])
+  }, [likes])
 
   useEffect(() => {
     try{setSecondName(likes[1].name)}
@@ -72,7 +72,7 @@ const LikedContainer = () => {
       setSecondName("example")
     }
     console.log(likes[1])
-  }, [useSelector(state => state.likedGifs)])
+  }, [likes])
 
   useEffect(() => {
     try{setThirdName(likes[2].name)}
@@ -80,7 +80,7 @@ const LikedContainer = () => {
       setThirdName("example")
     }
     console.log(likes[2])
-  }, [useSelector(state => state.likedGifs)])
+  }, [likes])
 
   useEffect(() => {
     try{setFourthName(likes[3].name)}
@@ -88,7 +88,7 @@ const LikedContainer = () => {
       setFourthName("example")
     }
     console.log(likes[3])
-  }, [useSelector(state => state.likedGifs)])
+  }, [likes])
 
   return(
     <div className="liked-layout-container">
