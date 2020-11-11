@@ -20,6 +20,10 @@ const addLike = (state = { likedGifs: []}, action) => {
             likedGifs: [...state.likedGifs.fill({url: action.payloadUrl, weirdness: action.payloadWeird, name: action.payloadName}, -1)]
         }
       }
+    case 'EMPTYLIKE':
+      return {
+          likedGifs: []
+      }
       
     default:
       return {...state};
