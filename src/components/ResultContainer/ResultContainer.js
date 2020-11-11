@@ -34,7 +34,7 @@ const ResultContainer = (props) => {
     setWeirdness(props.weirdness);
   }, [props.weirdness])
   useEffect(() => {
-    setGif(props.name);
+    setName(props.name);
   }, [props.name])
 
   return(
