@@ -3,7 +3,7 @@ import './LikedContainer.css';
 import placeholder from '../../resources/placeholder-image.png';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { removeFirst, removeLike } from '../../actions';
+import { removeLike } from '../../actions';
 
 const LikedContainer = () => {
   const dispatch = useDispatch();
