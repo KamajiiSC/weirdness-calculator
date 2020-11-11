@@ -13,8 +13,9 @@ export const emptyLike = () => {
   }
 }
 
-export const removeLike = () => {
+export const removeLike = (index) => {
   return{
-    type: "REMOVELIKE"
+    type: "REMOVELIKE",
+    payloadIndex: index
   }
 }
