@@ -151,7 +151,7 @@ const ResultsPage = () => {
 
   return(
     <div>
-      <h2>You scored a(n) {((firstWeird + secondWeird + thirdWeird + fourthWeird + fifthWeird) / 5)} out of 10 on the weirdness scale!</h2>
+      <h2>You scored a(n) {Math.floor((firstWeird + secondWeird + thirdWeird + fourthWeird + fifthWeird) / 5)} out of 10 on the weirdness scale!</h2>
       <h4>The GIFs you liked</h4>
       <div className="liked-list-results">
         <div><p>{firstName || "example"}</p><img src={firstGif} alt="Place holder for selected GIFs"/><p>{firstWeird || 0}/10</p></div>
